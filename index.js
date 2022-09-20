@@ -116,3 +116,35 @@ const charactersByEyesColor = characters.reduce((acc, cur) => {
 //     return acc;
 //   }, {});
 // console.log(charactersColor);
+
+/* SORT */
+
+// 1. Sort by mass ASC
+const byMass = characters.sort((a, b) => {
+  return a.mass - b.mass;
+});
+// console.log(byMass);
+
+// 2. Sort by height DESC
+const byHeight = characters.sort((a, b) => b.height - a.height);
+// console.log(byHeight);
+
+// 3. Sort by name
+const byName = characters.sort((a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+// console.log(byName);
+
+// 4. Sort by gender
+const byGender = characters.sort((a, b) => {
+  if (a.gender === "male") {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.log(byGender);
